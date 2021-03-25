@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/css/base.css">
+      <style>
+      </style>
+      <title>TemMaisOfertas - Araçatuba</title>
+      <meta property="og:title" content="TemMaisOfertas -  Super Diniz Araçatuba ">
+      <meta property="og:description" content="Ofertas do Super Diniz de Araçatuba ">
+      <meta property="og:url" content="https://www.temmaisofertas.com.br/aracatuba/">
+      <meta property="og:image" content= "https://www.temmaisofertas.com.br/aracatuba/img/r_.jpg" >
+      <meta property="og:image:width" content="300">
+      <meta property="og:image:height" content="300">
+      <meta property="og:type" content="article">
+      <meta property="og:locale" content="pt_BR">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script data-ad-client="ca-pub-8126809885917994" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B62EZV2LN5"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B62EZV2LN5');
+      </script>
+
+   </head>
+   <body onload="loadpost('');">
+      <section class="modalandmenu">
+      <!-- NAV FIXED START -->
+      <div class="navfixed w-100">
+         <div class="row no-gutters mt-2">
+            <div class="col-4 ml-2 m-1"><a href="https://www.temmaisofertas.com.br/aracatuba"><img src="/icon/tmo.png" class="img-fluid" alt="Ofertas de supermercados de Araçatuba"></a></div>
+            <div class="col"></div>
+            <div class="col-1 m-1"><a type="button" class="disabled" data-toggle="modal" data-target="#modal_cidade"><img src="/icon/btn5.png" class="img-fluid" alt="Escolha a cidade para ver as ofertas dos supermercados"></a></div>
+            <div class="col-1 m-1"><a href="https://www.temmaisofertas.com.br/aracatuba"><img src="/icon/btn7.png" class="img-fluid" alt="Acesse o feed de ofertas de supermercado do dia na cidade de Araçatuba "></a></div>
+            <div class="col-1 m-1 mr-2"><a type="button" class="disabled" data-toggle="modal" data-target="#modal_super"><img src="/icon/btn6.png" class="img-fluid" alt="Escolha os melhores supermercados de Araçatuba para ver as ofertas de supermercados do dia"></a></div>
+         </div>
+         <div class="main-header"></div>
+      </div>
+      <!-- NAV FIXED END -->
+      <!-- Modal Cidade -->
+      <div class="modal" id="modal_cidade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">Localização</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <!-- SEARCH BOX START -->
+                  <span>
+                     <h6><small>Você está em: </small><strong>Araçatuba</strong><small></small></h6>
+                  </span>
+                  <div class="input-group mb-3">
+                     <input id="filtro_cidade" type="text" class="form-control" placeholder="Pesquise a cidade...">
+                     <div class="input-group-append">
+                        <button class="btn btn-success" type="button">Procurar</button>
+                     </div>
+                  </div>
+                  <!-- SEARCH BOX END -->
+                  <span>
+                     <h6></h6>
+                  </span>
+                  <!-- DROPBOX START -->
+                  <!-- DROPBOX END -->
+                  <span>
+                     <h6></h6>
+                  </span>
+                  <span>
+                     <h6><small>Deslize a lista para escolher:</small></h6>
+                  </span>
+                  <!-- LIST BOX START-->
+                  <table class="list-group" id="lista_cidade">
+                     <tbody class="w-100">
+                        <tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/" class="list-group-item list-group-item-action text-left">Araçatuba<br><small>SP</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/treslagoas/" class="list-group-item list-group-item-action text-left">Três Lagoas<br><small>MS</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/lencoispta/" class="list-group-item list-group-item-action text-left">Lençois Paulista<br><small>SP</small></a></td></tr>
+                     </tbody>
+                  </table>
+                  <!-- LIST BOX END -->
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal Cidade END -->
+      <!-- Modal SUPER START -->
+      <div class="modal" id="modal_super" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title">Pesquisar Supermercado</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <!-- SEARCH BOX START -->
+                  <span>
+                     <h6><small>Você está em: </small><strong>Araçatuba</strong><small></small></h6>
+                  </span>
+                  <div class="input-group mb-3">
+                     <input id="filtro_super" type="text" class="form-control" placeholder="Pesquise o supermercado...">
+                     <div class="input-group-append">
+                        <button class="btn btn-success" type="button">Procurar</button>
+                     </div>
+                  </div>
+                  <!-- SEARCH BOX END -->
+                  <span>
+                     <h6></h6>
+                  </span>
+                  <!-- DROPBOX START -->
+                  <!-- DROPBOX END -->
+                  <span>
+                     <h6></h6>
+                  </span>
+                  <span>
+                     <h6><small>Deslize a lista para escolher:</small></h6>
+                  </span>
+                  <!-- LIST BOX START-->
+                  <table class="list-group" id="lista_super">
+                     <tbody class="w-100">
+                        <tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supermuffato.html" class="list-group-item list-group-item-action text-left">Supermercado Muffato<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supermercadorondon.html" class="list-group-item list-group-item-action text-left">Supermercados Rondon<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supercasadiniz.html" class="list-group-item list-group-item-action text-left">Super Diniz<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/atacadaoara.html" class="list-group-item list-group-item-action text-left">Atacadão<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/rosafelipe.html" class="list-group-item list-group-item-action text-left">Rosa Felipe Supermercado<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/assai.html" class="list-group-item list-group-item-action text-left">Assai Atacadista<br><small>Araçatuba</small></a></td></tr>
+                     </tbody>
+                  </table>
+                  <!-- LIST BOX END -->
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal SUPER END -->
+      </class>
+      <!-- FLUID START -->
+      <div class="container-fluid mt-5 pt-2">
+         <!-- Header home START-->
+            <div class="post mb-2 pb-2">
+                <div class="row no-gutters">
+                    <div class="col-2 p-2 "></div>
+                     <div class="col">
+                         <table>
+                             <tr class="top"><td><small>Veja as melhores ofertas de:</small></td></tr>
+                             <tr class="bot"><td><strong><a href="" data-toggle="modal" data-target="#modal_super">Super Diniz</strong><small> (trocar)</small><a></td></tr>
+                         </table>
+                     </div>
+                </div>
+            </div>
+         <data>
+            <!-- START POST -->
+<div class="post mb-4 pb-3" id=98610376_0>
+<div class="row no-gutters">
+
+<div class="col-2 p-2"><a href="/aracatuba/supercasadiniz"><img src="/logo/logo.png" class="img-fluid" alt="Super Diniz"></a></div>
+ <div class="col">
+     <table>
+         <tr class="bot"><td><strong><a href="/aracatuba/supercasadiniz.html">Super Diniz<a></strong></td></tr>
+         <tr class="top"><td><small>Araçatuba</small></td></tr>
+     </table>
+ </div>
+</div>
+<div class="row no-gutters m-0"><div class="col"><a href="/aracatuba/SuperDiniz_ofertas_do_dia_tabloide_supermercados_98610376_0.html"><img src="/aracatuba/img/r_98610376_0.jpg" class="img-fluid" alt="Ofertas do Super Diniz"></a></div></div>
+<div class="row no-gutters mt-2">
+ <div class="col share">COMPARTILHE</div>
+<div class="col-1 m-1"><a href="aracatuba/img/l_98610376_0.jpg" download="Super Diniz_Araçatuba_24 de março de 2021_98610376_0.jpg"><img src="/icon/btn1.png" class="img-fluid" alt="Download"></a></div>
+<div class="col-1 m-1"><a target="_blank" href="www.facebook.com.br"><img src="/icon/btn3.png" class="img-fluid" alt="Compartilhar facebook"></a></div>
+<div class="col-1 m-1 mr-2"><a href="javascript:void(0)" onclick="sharewhatsapp('/aracatuba/SuperDiniz_ofertas_do_dia_tabloide_supermercados_98610376_0.html');"><img src="/icon/btn4.png" class="img-fluid" alt="Compartilhar Whatsapp"></a></div>
+</div>
+<div class="row no-gutters"><small class="text-justify pr-3 pl-3">Ofertas do Super Diniz de Araçatuba. Sempre confira a validade e condições no folheto.</small></div>
+
+</div>
+<!-- END POST -->
+<!-- START POST -->
+<div class="post mb-4 pb-3" id=56627744_0>
+<div class="row no-gutters">
+
+<div class="col-1 m-2"><a href="/aracatuba/supercasadiniz"><img src="/logo/logo.png" class="img-fluid" alt="Super Diniz"></a></div>
+ <div class="col">
+     <table>
+         <tr class="bot"><td><strong><a href="/aracatuba/supercasadiniz.html">Super Diniz<a></strong></td></tr>
+         <tr class="top"><td><small>Araçatuba</small></td></tr>
+     </table>
+ </div>
+</div>
+<div class="row no-gutters m-0"><div class="col"><a href="/aracatuba/SuperDiniz_ofertas_do_dia_tabloide_supermercados_56627744_0.html"><img src="/aracatuba/img/r_56627744_0.jpg" class="img-fluid" alt="Ofertas do Super Diniz"></a></div></div>
+<div class="row no-gutters mt-2">
+ <div class="col share">COMPARTILHE</div>
+<div class="col-1 m-1"><a href="aracatuba/img/l_56627744_0.jpg" download="Super Diniz_Araçatuba_24 de março de 2021_56627744_0.jpg"><img src="/icon/btn1.png" class="img-fluid" alt="Download"></a></div>
+<div class="col-1 m-1"><a target="_blank" href="www.facebook.com.br"><img src="/icon/btn3.png" class="img-fluid" alt="Compartilhar facebook"></a></div>
+<div class="col-1 m-1 mr-2"><a href="javascript:void(0)" onclick="sharewhatsapp('/aracatuba/SuperDiniz_ofertas_do_dia_tabloide_supermercados_56627744_0.html');"><img src="/icon/btn4.png" class="img-fluid" alt="Compartilhar Whatsapp"></a></div>
+</div>
+
+</div>
+<!-- END POST -->
+
+         </data>
+         <section id="data_feed"></section>
+         <section id="lists">
+            <div class="post mt-2 mb-2 p-2">
+                <div class="row no-gutters">
+                    <div class="col"><tr class="top m-2 pb-2"><td><small>Mais supermercados em Araçatuba:</small></td></tr></div>
+                </div>
+                <div class="row no-gutters">
+                        <table class="list">
+                             <tbody class="w-100">
+                                <tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supermuffato.html" class="list-group-item list-group-item-action text-left">Supermercado Muffato<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supermercadorondon.html" class="list-group-item list-group-item-action text-left">Supermercados Rondon<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/supercasadiniz.html" class="list-group-item list-group-item-action text-left">Super Diniz<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/atacadaoara.html" class="list-group-item list-group-item-action text-left">Atacadão<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/rosafelipe.html" class="list-group-item list-group-item-action text-left">Rosa Felipe Supermercado<br><small>Araçatuba</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/assai.html" class="list-group-item list-group-item-action text-left">Assai Atacadista<br><small>Araçatuba</small></a></td></tr>
+                             </tbody>
+                        </table>
+                </div>
+            </div>
+         </section>
+         <br>
+      <section class="main-footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-20">
+                  <ul>
+                     Quem somos<br>
+                     Onde estamos<br>
+                     Anuncie aqui!<br>
+                     Trabalhe conosco<br>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="sub-footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p class="copyright">
+                     www.Tem Mais Ofertas.com.br<br>
+                     Todos os direitos reservados © 2021
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script>
+         function replaceSpecialChars(str)
+         {
+         str = str.toLowerCase();
+         str = str.replace(/[àáâãäåâ]/,"a");
+         str = str.replace(/[éèê]/,"e");
+         str = str.replace(/[ç]/,"c");
+
+         // o resto
+
+         return str.replace(/[^a-z0-9]/gi,'');
+         }
+
+         var filtro_cidade = document.getElementById('filtro_cidade');
+         var tabela_cidade = document.getElementById('lista_cidade');
+         filtro_cidade.onkeyup = function() {
+         var nomeFiltro_cidade = filtro_cidade.value;
+         var str_filtro = replaceSpecialChars(nomeFiltro_cidade)
+         for (var i = 0; i < tabela_cidade.rows.length; i++) {
+         var conteudoCelula = tabela_cidade.rows[i].cells[0].innerText;
+         var str = replaceSpecialChars(conteudoCelula)
+         var corresponde = str.toLowerCase().indexOf(str_filtro) >= 0;
+         tabela_cidade.rows[i].style.display = corresponde ? '' : 'none';
+         }
+         };
+
+         var filtro_super = document.getElementById('filtro_super');
+         var tabela_super = document.getElementById('lista_super');
+         filtro_super.onkeyup = function() {
+         var nomeFiltro_super = filtro_super.value;
+         var str_filtro = replaceSpecialChars(nomeFiltro_super)
+         for (var i = 0; i < tabela_super.rows.length; i++) {
+         var conteudoCelula = tabela_super.rows[i].cells[0].innerText;
+         var str = replaceSpecialChars(conteudoCelula)
+         var corresponde = str.toLowerCase().indexOf(str_filtro) >= 0;
+         tabela_super.rows[i].style.display = corresponde ? '' : 'none';
+         }
+         };
+         function sharewhatsapp(id){
+         window.location='https://wa.me/?text=https://www.temmaisofertas.com.br'+id;}
+
+         function loadpost(url){
+         if (url == '') {
+         return;
+         }
+         fetch(url).then(function (response) {
+         // The API call was successful!
+         return response.text();
+         }).then(function (html) {
+         //get the showed id
+         var id = document.getElementsByClassName('post')[1].id;
+         // Convert the HTML string into a document object
+         var parser = new DOMParser();
+         var doc = parser.parseFromString(html, 'text/html');
+         doc.getElementById(id).classList.add('d-none');
+         // Get the body
+         var body = doc.querySelector('data');
+         var bodyhtml = body.outerHTML
+         document.getElementById("data_feed").innerHTML = bodyhtml;
+
+         console.log(body);
+
+         }).catch(function (err) {
+         // There was an error
+         console.warn('Something went wrong.', err);
+         });
+         }
+
+      </script>
+   </body>
+</html>

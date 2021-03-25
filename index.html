@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/css/base.css">
+      <style>
+      </style>
+      <title>TemMaisOfertas - </title>
+      <meta property="og:title" content="TemMaisOfertas">
+      <meta property="og:description" content="Acesse Ofertas Imperdíveis dos supermercados de sua cidade">
+      <meta property="og:url" content="https://www.temmaisofertas.com.br/index.html">
+      <meta property="og:image" content="https://www.temmaisofertas.com.br/index.jpg">
+      <meta property="og:image:width" content="300">
+      <meta property="og:image:height" content="300">
+      <meta property="og:type" content="article">
+      <meta property="og:locale" content="pt_BR">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script data-ad-client="ca-pub-8126809885917994" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B62EZV2LN5"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B62EZV2LN5');
+      </script>
+  <style>
+
+    h6 {
+      font: 1em;
+    }
+
+  </style>
+  </head>
+  <body>
+<div class="container-fluid">
+    <div class="content m-2">
+	<div class="row m-2">
+		<div class="col">
+		</div>
+		<div class="col-6 m-2">
+			<img alt="Bootstrap Image Preview" src="/icon/tmo.png" class="img-fluid">
+		</div>
+		<div class="col">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+		     <button id='btn' type="button" onclick="getposition();" class="btn btn-success btn-block d-none">
+				Localizar minha cidade
+			</button><br>
+		    <h6 id="msg0" class="text-center text-primary">
+				Atualizando ofertas...
+			</h6>
+			<h6 id="msg1" class="text-center text-primary d-none">
+				Não encontramos a sua localização...
+			</h6>
+			<h6 id="msg2" class="text-info d-none">
+				Você não autorizou o acesso a sua localização.
+
+			</h6>
+			<h6 id="msg3" class="text-info d-none">
+				Você está em: ????
+			</h6>
+
+				<div id="loading" class="d-none"></div>
+
+			<h6 id="msg4" class="text-primary d-none">
+				Estamos chegando, mas infelizmente ainda não temos ofertas para a sua localidade.
+				<div>
+					Selecione na lista abaixo a cidade mais próxima:<br>
+				</div>
+			</h6>
+			<br>
+			<h6 id="msg5" class="text-primary d-none">
+				Selecione na lista abaixo a cidade desejada:<br>
+			</h6>
+             <!-- SEARCH BOX START -->
+             <div id="lista" class="d-none p-2">
+                <div class="input-group mb-3">
+                  <input id="filtro_cidade" type="text" class="form-control" placeholder="Pesquise a cidade...">
+                  <div class="input-group-append">
+                    <button class="btn btn-success" type="button">Procurar</button>
+                  </div>
+                </div>
+                <!-- SEARCH BOX END -->
+                <span><h6></h6></span>
+                <!-- DROPBOX START -->
+                <!-- DROPBOX END -->
+                <span><h6></h6></span>
+                <span><h6><small>Deslize a lista para escolher:</small></h6></span>
+                <!-- LIST BOX START-->
+                <table class="list-group" id="lista_cidade">
+                  <tbody class="w-100">
+                  <tr><td><a href="https://www.temmaisofertas.com.br/aracatuba/" class="list-group-item list-group-item-action text-left">Araçatuba<br><small>SP</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/treslagoas/" class="list-group-item list-group-item-action text-left">Três Lagoas<br><small>MS</small></a></td></tr><tr><td><a href="https://www.temmaisofertas.com.br/lencoispta/" class="list-group-item list-group-item-action text-left">Lençois Paulista<br><small>SP</small></a></td></tr>
+                 </tbody>
+                </table>
+             </div>
+                <!-- LIST BOX END -->
+
+
+		</div>
+	</div>
+</div>
+</div>
+<script data-ad-client="ca-pub-8126809885917994" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', userisnew());
+
+    function userisnew(){
+        flag = checkCookie('cidade');
+        if (flag == false){
+            hidden('msg0');
+            show('msg1');
+            show('btn');
+        }else{
+            cidade = getCookie('cidade');
+            window.location.href = '/'+cidade;
+        }
+}
+    function show (id){
+        document.getElementById(id).classList.remove('d-none');}
+
+    function hidden (id){
+        document.getElementById(id).classList.add('d-none');}
+
+    function getposition(){
+        hidden('msg1');
+        show('msg0');
+        document.getElementById('btn').classList.add('btn-disabled');
+        navigator.geolocation.getCurrentPosition(cachePosition,showError);
+    }
+
+    function cachePosition(position) {
+          var lat = position.coords.latitude;
+          var long = position.coords.longitude;
+          setCookie('lat',lat,365);
+          setCookie('long',long,365);
+          fetchpos('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+lat+'&longitude='+long+'&altitude=null&accuracy=10&altitudeAccuracy=null&heading=null&speed=null&localityLanguage=pt');
+    }
+
+    function checkcity(cidadeinput){
+        var cidades = ['treslagoas','bauru','lins'];
+        cidadestr = replaceSpecialChars(cidadeinput);
+        hidden('msg0');
+        for (cidade of cidades){
+            if (cidadestr == cidade){
+                setCookie('cidade',cidade,365);
+                console.log('cookiesalvo');
+                document.getElementById('msg3').innerHTML = "Você está em: "+cidadeinput;
+                show('msg3');
+                hidden('msg1');
+                window.location.href = '/'+cidadestr;
+                break;
+            }else{
+                //n encontrado
+                setCookie('errorcidade',cidadestr,365);
+                document.getElementById('msg3').innerHTML = "Você está em: "+cidadeinput;
+                hidden('msg1');
+                show ('msg3');
+                show ('msg4');
+                show ('lista');
+            }
+        }
+    }
+
+    function setCookie(cname,cvalue,exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;secure";
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    };
+
+    function checkCookie(cname) {
+      var cookie = getCookie(cname);
+      if (cookie != "") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function replaceSpecialChars(str){
+        str = str.toLowerCase();
+        str = str.replace(/[àáâ]/,"a");
+        str = str.replace(/[éèê]/,"e");
+        str = str.replace(/[ç]/,"c");
+        str = str.replace(/[ ]/,"");
+        return str.replace(/[^a-z0-9]/gi,'');
+    }
+
+    function showError(error) {
+      var cerror;
+      setCookie('error',cerror,365);
+      show('lista');
+      hidden('msg0');
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          cerror = "User denied the request for Geolocation."
+          show('msg2');
+          show('msg5');
+          break;
+        case error.POSITION_UNAVAILABLE:
+          cerror = "Location information is unavailable."
+          show('msg2');
+          show('msg5');
+          break;
+        case error.TIMEOUT:
+          cerror = "The request to get user location timed out."
+          show('msg2');
+          show('msg5');
+          break;
+        case error.UNKNOWN_ERROR:
+          cerror = "An unknown error occurred."
+          show('msg2');
+          show('msg5');
+          break;
+      }
+
+    }
+
+    function fetchpos(url){
+        fetch(url).then(response => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error('Ops! Houve um erro em nosso servidor.');
+        }
+      })
+      .then(response => {
+        console.debug(response.city);
+        var cidade = response.city;
+        checkcity(cidade);
+        // ...
+      }).catch(error => {
+        console.error(error);
+      });
+    }
+
+     function loadpost(url){
+        if (url == '') {
+            return;
+        }
+    fetch(url).then(function (response) {
+    	// The API call was successful!
+    	return response.text();
+    }).then(function (html) {
+
+    	// Convert the HTML string into a document object
+    	var parser = new DOMParser();
+    	var doc = parser.parseFromString(html, 'text/html');
+    		// Get the body
+    	var body = doc.querySelector('data');
+    	var bodyhtml = body.outerHTML
+    	document.getElementById("data_feed").innerHTML = bodyhtml;
+    	console.log(body);
+
+    }).catch(function (err) {
+    	// There was an error
+    	console.warn('Something went wrong.', err);
+    });
+}
+
+</script>
+  </body>
+</html>
